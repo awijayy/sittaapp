@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tracking Pengiriman</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <h2>Tracking</h2>
+    <a href="dashboard.html">Kembali ke Dashboard</a>
+  </div>
+
+  <div class="content">
+    <!-- isi tracking -->
+  </div>
+</div>
+
+<div class="container">
+
+  <h2>Tracking Pengiriman</h2>
+
+  <input type="text" id="noDO" placeholder="Masukkan Nomor DO" required>
+  <button onclick="cariTracking()">Cari</button>
+
+  <div id="hasilTracking" class="hasil-box"></div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script>
+  cekLogin();
+</script>
+
+</body>
+</html>

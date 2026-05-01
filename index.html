@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login SITTA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+  <div class="container">
+  <div class="login-header">
+    <img src="img/logo-ut.jpg" class="logo">
+    <h2>Login SITTA</h2>
+    <p>Kelola bahan ajar dengan mudah</p>
+  </div>
+
+  <form id="loginForm">
+
+    <div class="input-group">
+      <span>📧</span>
+      <input type="email" id="email" placeholder="Email" required>
+    </div>
+
+    <div class="input-group">
+  <span>🔒</span>
+  <input type="password" id="password" placeholder="Password" required>
+  <span class="toggle-pass" onclick="togglePassword()">👁️</span>
+  </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p class="link" onclick="openModal('lupaModal')">Lupa Password?</p>
+  <p>Belum punya akun? <span class="link" onclick="openModal('daftarModal')">Daftar Sekarang</span></p>
+
+<!-- MODAL LUPA PASSWORD -->
+<div id="lupaModal" class="modal">
+  <div class="modal-content">
+    <h3>Lupa Password</h3>
+
+    <input type="email" id="lupaEmail" placeholder="Masukkan Email">
+    <button onclick="kirimReset()">Kirim Reset</button>
+
+    <br><br>
+    <button onclick="closeModal('lupaModal')">Tutup</button>
+  </div>
+</div>
+
+<!-- MODAL DAFTAR -->
+<div id="daftarModal" class="modal">
+  <div class="modal-content">
+    <h3>Daftar Akun</h3>
+
+    <input type="text" id="regNama" placeholder="Nama">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Password">
+
+    <button onclick="daftarUser()">Daftar</button>
+
+    <br><br>
+    <button onclick="closeModal('daftarModal')">Tutup</button>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script>
+  if (localStorage.getItem("userLogin")) {
+    window.location.href = "dashboard.html";
+  }
+</script>

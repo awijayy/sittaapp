@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Stok Bahan Ajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <h2>Bahan Ajar</h2>
+    <a href="dashboard.html">Kembali ke Dashboard</a>
+  </div>
+
+<div class="container">
+  <h2>Total Keseluruhan Bahan Ajar</h2>
+
+  <!-- FORM TAMBAH DATA -->
+  <input type="text" id="namaBarang" placeholder="Nama Bahan Ajar" required>
+  <input type="number" id="stok" placeholder="Jumlah Stok" required>
+  <button onclick="tambahStok()">Tambah ke Stok</button>
+  <input type="text" id="searchStok" placeholder="🔍 Cari barang..." onkeyup="filterStok()">
+
+<!-- TABEL -->
+  <table id="tabelStok">
+    <thead>
+      <tr>
+        <th>Kode</th>
+        <th>Gambar</th>
+        <th>Nama</th>
+        <th>Jenis</th>
+        <th>Stok</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- MODAL PREVIEW GAMBAR -->
+    <div id="imgModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeImage()" style="cursor:pointer;">❌ Tutup</span>
+        <br><br>
+        <img id="previewImg" src="" width="100%">
+    </div>
+    </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script>
+  cekLogin();
+</script>
+
+</body>
+</html>

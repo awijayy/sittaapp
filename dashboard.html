@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard SITTA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+ <div class="topbar">
+
+  <div class="topbar-left">
+    <img src="img/logo-ut.jpg" class="logo">
+    <div>
+      <h2 id="greeting"></h2>
+      <p id="lokasiUser"></p>
+    </div>
+  </div>
+
+  <button onclick="logout()">Logout</button>
+
+</div>
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="card-container">
+
+      <a href="stok.html" class="card-menu">
+        <div class="icon">📚</div>
+        <h3>Bahan Ajar</h3>
+        <p>Kelola stok</p>
+      </a>
+
+      <a href="tracking.html" class="card-menu">
+        <div class="icon">🚚</div>
+        <h3>Tracking</h3>
+        <p>Cek pengiriman</p>
+      </a>
+
+      <a href="laporan.html" class="card-menu">
+        <div class="icon">📊</div>
+        <h3>Laporan</h3>
+        <p>Monitoring & Rekap</p>
+      </a>
+
+      <a href="histori.html" class="card-menu">
+        <div class="icon">📜</div>
+        <h3>Histori</h3>
+        <p>Riwayat Transaksi</p>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Lebih aman urutan ini -->
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  cekLogin();
+</script>
+
+</body>
+</html>

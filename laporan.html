@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    <h2>📊 Laporan</h2>
+    <a href="dashboard.html">Kembali ke Dashboard</a>
+  </div>
+
+  <div class="content">
+  <h3>Monitoring Progress DO</h3>
+  <div id="progressDO"></div>
+  <div class="laporan-grid">
+
+  <!-- GRAFIK -->
+  <div class="card">
+    <h3>Grafik Rekap</h3>
+    <div class="chart-box">
+      <canvas id="chartRekap"></canvas>
+    </div>
+  </div>
+
+  <!-- TABEL -->
+  <div class="card">
+    <h3>Rekap Bahan Ajar</h3>
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Total Stok</th>
+        </tr>
+      </thead>
+      <tbody id="rekapTable"></tbody>
+    </table>
+  </div>
+ </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+
+<script>
+  cekLogin();
+  tampilkanLaporan();
+</script>
+<script>
+  cekLogin();
+  tampilkanLaporan();
+  tampilkanChart();
+</script>
+
+</body>
+</html>
